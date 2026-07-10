@@ -14,6 +14,8 @@ This project demonstrates several commonly used CDC techniques and compares thei
 - Waveform analysis for signal verification
 - Modular and reusable hardware design
 
+## Project Structure
+
 ```text
 CDC-Techniques-for-Reliable-Data-Transfer
 │
