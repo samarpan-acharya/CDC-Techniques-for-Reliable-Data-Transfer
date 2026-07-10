@@ -40,3 +40,26 @@ This project demonstrates four commonly used Clock Domain Crossing (CDC) techniq
 | Pulse Synchronizer | Transfers short pulses safely between different clock domains. |
 | Handshake Synchronizer | Reliably transfers multi-bit data using a request-acknowledge protocol. |
 | Asynchronous FIFO | Enables continuous multi-bit data transfer between independent clock domains using Gray-code pointers. |
+## Simulation Results
+
+### 2-Flop Synchronizer
+
+![2-Flop Synchronizer](waveforms/2ffsync.png)
+
+---
+
+### Pulse Synchronizer
+
+![Pulse Synchronizer](waveforms/pulsesync.png)
+
+---
+
+### Handshake Synchronizer
+
+![Handshake Synchronizer](waveforms/handshakesync.png)
+
+---
+
+### Asynchronous FIFO
+
+![Asynchronous FIFO](waveforms/asyncfifo1.png)
