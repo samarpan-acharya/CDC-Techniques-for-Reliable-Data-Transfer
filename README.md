@@ -27,4 +27,4 @@ CDC-Techniques-for-Reliable-Data-Transfer
 ```
 ## Block Diagram
 
-![Block Diagram](images/block_diagram.svg)
+![Block Diagram](images/cdc_top_block_diagram.svg)
