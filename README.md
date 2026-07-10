@@ -30,3 +30,13 @@ CDC-Techniques-for-Reliable-Data-Transfer
 ## Block Diagram
 
 ![Block Diagram](images/cdc_top_block_diagram.svg)
+## Implemented CDC Techniques
+
+This project demonstrates four commonly used Clock Domain Crossing (CDC) techniques for reliable communication between asynchronous clock domains.
+
+| Module | Purpose |
+|---------|---------|
+| 2-Flop Synchronizer | Synchronizes single-bit control signals while reducing metastability. |
+| Pulse Synchronizer | Transfers short pulses safely between different clock domains. |
+| Handshake Synchronizer | Reliably transfers multi-bit data using a request-acknowledge protocol. |
+| Asynchronous FIFO | Enables continuous multi-bit data transfer between independent clock domains using Gray-code pointers. |
