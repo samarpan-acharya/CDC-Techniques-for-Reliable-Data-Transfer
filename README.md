@@ -19,10 +19,12 @@ This project demonstrates several commonly used CDC techniques and compares thei
 ```text
 CDC-Techniques-for-Reliable-Data-Transfer
 │
-├── rtl/          # Verilog RTL modules
-├── tb/           # Testbenches
-├── waveforms/    # Simulation waveform screenshots
-├── images/       # Images used in README
+├── docs/          
+├── images/         
+├── reports/    
+├── rtl/     
+├── tb/
+├── waveforms/
 └── README.md
 ```
 ## Block Diagram
