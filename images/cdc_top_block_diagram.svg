@@ -1,0 +1,78 @@
+<svg width="680" height="520" viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <title>Block diagram of cdc_top module</title>
+  <desc>Structural diagram showing cdc_top containing four clock domain crossing submodules: flop_sync_2, pulse_sync, handshake_sync, and async_fifo, each bridging a source clock domain to a destination clock domain.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="680" height="520" fill="#FFFFFF"/>
+
+  <!-- Outer container -->
+  <rect x="40" y="60" width="600" height="440" rx="20" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="60" y="85" font-size="14" font-weight="500" fill="#2C2C2A">CDC Top-Level Architecture</text>
+
+  <text x="140" y="112" font-size="12" fill="#5F5E5A" text-anchor="middle">Source Clock Domain (clk_src)</text>
+  <text x="565" y="112" font-size="12" fill="#5F5E5A" text-anchor="middle">Destination Clock Domain (clk_dst)</text>
+
+  <!-- Row 1: flop_sync_2 -->
+  <rect x="60" y="138" width="160" height="44" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="140" y="160" font-size="14" fill="#2C2C2A" text-anchor="middle" dominant-baseline="central">data_in</text>
+
+  <rect x="250" y="132" width="220" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="360" y="152" font-size="14" font-weight="500" fill="#085041" text-anchor="middle">flop_sync_2</text>
+  <text x="360" y="172" font-size="12" fill="#0F6E56" text-anchor="middle">2-flop synchronizer</text>
+
+  <rect x="490" y="138" width="150" height="44" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="565" y="160" font-size="14" fill="#2C2C2A" text-anchor="middle" dominant-baseline="central">data_out</text>
+
+  <line x1="220" y1="160" x2="248" y2="160" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="472" y1="160" x2="488" y2="160" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 2: pulse_sync -->
+  <rect x="60" y="228" width="160" height="44" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="140" y="250" font-size="14" fill="#2C2C2A" text-anchor="middle" dominant-baseline="central">pulse_in</text>
+
+  <rect x="250" y="222" width="220" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="360" y="242" font-size="14" font-weight="500" fill="#085041" text-anchor="middle">pulse_sync</text>
+  <text x="360" y="262" font-size="12" fill="#0F6E56" text-anchor="middle">toggle-based sync</text>
+
+  <rect x="490" y="228" width="150" height="44" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="565" y="250" font-size="14" fill="#2C2C2A" text-anchor="middle" dominant-baseline="central">pulse_out</text>
+
+  <line x1="220" y1="250" x2="248" y2="250" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="472" y1="250" x2="488" y2="250" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 3: handshake_sync -->
+  <rect x="60" y="318" width="160" height="44" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="140" y="340" font-size="14" fill="#2C2C2A" text-anchor="middle" dominant-baseline="central">hs_data_in, hs_send</text>
+
+  <rect x="250" y="312" width="220" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="360" y="332" font-size="14" font-weight="500" fill="#085041" text-anchor="middle">handshake_sync</text>
+  <text x="360" y="352" font-size="12" fill="#0F6E56" text-anchor="middle">req/ack handshake</text>
+
+  <rect x="490" y="312" width="150" height="56" rx="8" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="565" y="328" font-size="14" font-weight="500" fill="#2C2C2A" text-anchor="middle">hs_data_out</text>
+  <text x="565" y="344" font-size="12" fill="#5F5E5A" text-anchor="middle">hs_data_valid</text>
+  <text x="565" y="358" font-size="12" fill="#5F5E5A" text-anchor="middle">hs_ready</text>
+
+  <line x1="220" y1="340" x2="248" y2="340" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="472" y1="340" x2="488" y2="340" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 4: async_fifo -->
+  <rect x="60" y="402" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="140" y="422" font-size="14" font-weight="500" fill="#2C2C2A" text-anchor="middle">wr_en, wr_data</text>
+  <text x="140" y="442" font-size="12" fill="#5F5E5A" text-anchor="middle">rd_en</text>
+
+  <rect x="250" y="402" width="220" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="360" y="422" font-size="14" font-weight="500" fill="#085041" text-anchor="middle">async_fifo</text>
+  <text x="360" y="442" font-size="12" fill="#0F6E56" text-anchor="middle">dual-clock, gray-code</text>
+
+  <rect x="490" y="402" width="150" height="56" rx="8" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="565" y="422" font-size="14" font-weight="500" fill="#2C2C2A" text-anchor="middle">rd_data</text>
+  <text x="565" y="442" font-size="12" fill="#5F5E5A" text-anchor="middle">full, empty</text>
+
+  <line x1="220" y1="430" x2="248" y2="430" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="472" y1="430" x2="488" y2="430" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>
