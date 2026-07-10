@@ -6,3 +6,10 @@ This project implements and evaluates multiple Clock Domain Crossing (CDC) techn
 Clock Domain Crossing (CDC) is a fundamental challenge in digital system design whenever signals are transferred between modules operating on different clock frequencies. Improper synchronization may lead to metastability and unreliable system behavior.
 
 This project demonstrates several commonly used CDC techniques and compares their behavior through simulation using Verilog HDL.
+## Features
+
+- Implementation of multiple Clock Domain Crossing (CDC) techniques
+- RTL design in Verilog HDL
+- Functional verification using dedicated testbenches
+- Waveform analysis for signal verification
+- Modular and reusable hardware design
