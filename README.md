@@ -99,7 +99,3 @@ National Institute of Technology Rourkela
 
 > **Note:** This repository is intended for educational purposes and demonstrates practical RTL implementation and functional verification of commonly used Clock Domain Crossing (CDC) techniques in digital system design.
 ---
-
-### Asynchronous FIFO
-
-![Asynchronous FIFO](waveforms/asyncfifo1.png)
