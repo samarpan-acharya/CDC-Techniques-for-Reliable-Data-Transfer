@@ -1,63 +1,103 @@
 # CDC Techniques for Reliable Data Transfer
 
-This project implements and evaluates multiple Clock Domain Crossing (CDC) techniques in Verilog HDL to enable reliable data transfer between asynchronous clock domains. The project includes RTL design, verification using testbenches, and waveform analysis.
-## Overview
+This project implements and evaluates multiple Clock Domain Crossing (CDC) techniques in Verilog HDL to enable reliable data transfer between asynchronous clock domains. The project includes RTL design, functional verification using dedicated testbenches, and waveform analysis.
 
-Clock Domain Crossing (CDC) is a fundamental challenge in digital system design whenever signals are transferred between modules operating on different clock frequencies. Improper synchronization may lead to metastability and unreliable system behavior.
+![CDC Top-Level Architecture](images/cdc_top_block_diagram.svg)
 
-This project demonstrates several commonly used CDC techniques and compares their behavior through simulation using Verilog HDL.
-## Features
+---
 
-- Implementation of multiple Clock Domain Crossing (CDC) techniques
-- RTL design in Verilog HDL
-- Functional verification using dedicated testbenches
-- Waveform analysis for signal verification
-- Modular and reusable hardware design
+## Project Overview
 
-## Project Structure
+Clock Domain Crossing (CDC) is a fundamental challenge in digital system design whenever signals are transferred between modules operating on different clock frequencies. Improper synchronization may lead to metastability, resulting in unreliable system behavior.
 
-```text
-CDC-Techniques-for-Reliable-Data-Transfer
-│
-├── docs/          
-├── images/         
-├── reports/    
-├── rtl/     
-├── tb/
-├── waveforms/
-└── README.md
-```
-## Block Diagram
+This project demonstrates four widely used CDC techniques by implementing synthesizable RTL modules and verifying their functionality through simulation.
 
-![Block Diagram](images/cdc_top_block_diagram.svg)
+---
+
+## Key Highlights
+
+- Implemented four widely used Clock Domain Crossing (CDC) techniques in synthesizable Verilog HDL.
+- Developed modular RTL designs for independent CDC implementations.
+- Verified functionality through dedicated simulation testbenches.
+- Evaluated waveform behavior across asynchronous clock domains.
+- Organized the project using reusable RTL modules and structured verification.
+
+---
+
 ## Implemented CDC Techniques
 
-This project demonstrates four commonly used Clock Domain Crossing (CDC) techniques for reliable communication between asynchronous clock domains.
+| Module | Description |
+|---------|-------------|
+| **2-Flop Synchronizer** | Synchronizes single-bit control signals while minimizing metastability. |
+| **Pulse Synchronizer** | Transfers short-duration pulses across asynchronous clock domains. |
+| **Handshake Synchronizer** | Transfers multi-bit data using a request–acknowledge handshake protocol. |
+| **Asynchronous FIFO** | Enables reliable continuous data transfer between independent clock domains using Gray-code pointer synchronization. |
 
-| Module | Purpose |
-|---------|---------|
-| 2-Flop Synchronizer | Synchronizes single-bit control signals while reducing metastability. |
-| Pulse Synchronizer | Transfers short pulses safely between different clock domains. |
-| Handshake Synchronizer | Reliably transfers multi-bit data using a request-acknowledge protocol. |
-| Asynchronous FIFO | Enables continuous multi-bit data transfer between independent clock domains using Gray-code pointers. |
+---
+
 ## Simulation Results
 
 ### 2-Flop Synchronizer
 
 ![2-Flop Synchronizer](waveforms/2ffsync.png)
 
----
-
 ### Pulse Synchronizer
 
 ![Pulse Synchronizer](waveforms/pulsesync.png)
-
----
 
 ### Handshake Synchronizer
 
 ![Handshake Synchronizer](waveforms/handshakesync.png)
 
+### Asynchronous FIFO
+
+![Asynchronous FIFO](waveforms/asyncfifo1.png)
+
+---
+
+## Tools Used
+
+- Verilog HDL
+- Xilinx Vivado Simulator
+- Digital Logic Design
+- Clock Domain Crossing (CDC)
+
+---
+
+## Repository Structure
+
+```text
+CDC-Techniques-for-Reliable-Data-Transfer
+│
+├── images/         Block diagrams used in the README
+├── rtl/            Verilog HDL source files
+├── tb/             Simulation testbenches
+├── waveforms/      Simulation waveform screenshots
+└── README.md
+```
+
+---
+
+## Project Outcomes
+
+- Implemented and verified four industry-standard Clock Domain Crossing (CDC) techniques.
+- Demonstrated reliable single-bit, pulse-based, handshake-based, and FIFO-based data transfer across asynchronous clock domains.
+- Validated functionality through behavioral simulation and waveform analysis.
+- Designed reusable and modular RTL blocks suitable for integration into larger digital systems.
+
+---
+
+## Author
+
+**Samarpan Acharya**
+
+B.Tech • Electronics and Communication Engineering
+
+National Institute of Technology Rourkela
+
+---
+
+> **Note:** This repository is intended for educational purposes and demonstrates practical RTL implementation and functional verification of commonly used Clock Domain Crossing (CDC) techniques in digital system design.
 ---
 
 ### Asynchronous FIFO
