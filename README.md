@@ -13,3 +13,13 @@ This project demonstrates several commonly used CDC techniques and compares thei
 - Functional verification using dedicated testbenches
 - Waveform analysis for signal verification
 - Modular and reusable hardware design
+
+```text
+CDC-Techniques-for-Reliable-Data-Transfer
+│
+├── rtl/          # Verilog RTL modules
+├── tb/           # Testbenches
+├── waveforms/    # Simulation waveform screenshots
+├── images/       # Images used in README
+└── README.md
+```
