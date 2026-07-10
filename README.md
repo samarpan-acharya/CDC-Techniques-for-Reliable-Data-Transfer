@@ -25,3 +25,6 @@ CDC-Techniques-for-Reliable-Data-Transfer
 ├── images/       # Images used in README
 └── README.md
 ```
+## Block Diagram
+
+![Block Diagram](images/block_diagram.svg)
