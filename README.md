@@ -1,4 +1,4 @@
-# CDC Techniques for Reliable Data Transfer
+# CDC Techniques for Reliable Data T
 
 This project implements and evaluates multiple Clock Domain Crossing (CDC) techniques in Verilog HDL to enable reliable data transfer between asynchronous clock domains. The project includes RTL design, functional verification using dedicated testbenches, and waveform analysis.
 
